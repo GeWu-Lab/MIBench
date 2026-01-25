@@ -76,3 +76,33 @@ $(document).ready(function() {
     bulmaSlider.attach();
 
 })
+
+
+$(document).ready(function() {
+  var options = {
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    loop: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  }
+
+  // 初始化所有带 .results-carousel 类的元素
+  var carousels = bulmaCarousel.attach('.results-carousel', options);
+
+  // 这是一个处理视频自动播放的修复（如果你放的是视频而不是图片，这很有用）
+  for(var i = 0; i < carousels.length; i++) {
+    carousels[i].on('before:show', state => {
+      console.log(state);
+    });
+  }
+  
+  // 确保元素改变大小时刷新
+  var element = document.querySelector('#results-carousel');
+  if (element) {
+      element.bulmaCarousel.on('show', function(state) {
+          console.log(state);
+      });
+  }
+})

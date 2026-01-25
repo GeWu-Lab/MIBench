@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8">
   <meta name="description"
-        content="Deformable Neural Radiance Fields creates free-viewpoint portraits (nerfies) from casually captured videos.">
-  <meta name="keywords" content="Nerfies, D-NeRF, NeRF">
+        content="MIBench: Evaluating LMMs on Multimodal Interaction">
+  <meta name="keywords" content="MIBench, LMMs, Multimodal Interaction">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Nerfies: Deformable Neural Radiance Fields</title>
+  <title>MIBench: Evaluating LMMs on Multimodal Interaction</title>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-PYVRSFMDRL"></script>
@@ -21,6 +21,17 @@
 
     gtag('config', 'G-PYVRSFMDRL');
   </script>
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    };
+</script>
+<script id="MathJax-script" async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -52,7 +63,7 @@
   </div>
   <div class="navbar-menu">
     <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
+      <a class="navbar-item" href="https://gewu-lab.github.io/">
       <span class="icon">
           <i class="fas fa-home"></i>
       </span>
@@ -63,17 +74,8 @@
           More Research
         </a>
         <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
+          <a class="navbar-item" href="https://gewu-lab.github.io/">
+            GeWu Lab@RUC
           </a>
         </div>
       </div>
@@ -88,48 +90,44 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
+          <h1 class="title is-1 publication-title">MIBench: Evaluating LMMs on Multimodal Interaction</h1>
           <div class="is-size-5 publication-authors">
             <span class="author-block">
-              <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span>
+              <a href="https://keunhong.com">Yu Miao</a><sup>1,2</sup>,</span>
             <span class="author-block">
-              <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span>
+              <a href="https://utkarshsinha.com">Zequn Yang</a><sup>1,2</sup>,</span>
             <span class="author-block">
-              <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>,
+              <a href="https://jonbarron.info">Yake Wei</a><sup>1,2</sup>,
             </span>
             <span class="author-block">
-              <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>,
+              <a href="http://sofienbouaziz.com">Ziheng Chen</a><sup>1,2</sup>,
             </span>
             <span class="author-block">
-              <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>,
+              <a href="https://www.danbgoldman.com">Haotian Ni</a><sup>3</sup>,
             </span>
             <span class="author-block">
-              <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>,
+              <a href="https://homes.cs.washington.edu/~seitz/">Haodong Duan</a><sup>4</sup>,
             </span>
             <span class="author-block">
-              <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
+              <a href="http://www.ricardomartinbrualla.com">Kai Chen</a><sup>4</sup>,
+            </span>
+            <span class="author-block">
+              <a href="http://www.ricardomartinbrualla.com">Di Hu</a><sup>1,2</sup>
             </span>
           </div>
 
           <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Washington,</span>
-            <span class="author-block"><sup>2</sup>Google Research</span>
+            <span class="author-block"><sup>1</sup>Gaoling School of Artificial Intelligence, Renmin University of China, Beijing, China</span>
+            <span class="author-block"><sup>2</sup>Beijing Key Laboratory of Research on Large Models and Intelligent Governance, Beijing, China</span>
+            <span class="author-block"><sup>3</sup>Beihang University, Beijing, China</span>
+            <span class="author-block"><sup>4</sup>Shanghai Artificial Intelligence Laboratory, Shanghai, China</span>
           </div>
 
           <div class="column has-text-centered">
             <div class="publication-links">
               <!-- PDF Link. -->
               <span class="link-block">
-                <a href="https://arxiv.org/pdf/2011.12948"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
-                      <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2011.12948"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="ai ai-arxiv"></i>
@@ -139,17 +137,17 @@
               </span>
               <!-- Video Link. -->
               <span class="link-block">
-                <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
+                <!-- <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-youtube"></i>
                   </span>
                   <span>Video</span>
-                </a>
+                </a> -->
               </span>
               <!-- Code Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="fab fa-github"></i>
@@ -159,15 +157,23 @@
               </span>
               <!-- Dataset Link. -->
               <span class="link-block">
-                <a href="https://github.com/google/nerfies/releases/tag/0.1"
+                <a href=""
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                       <i class="far fa-images"></i>
                   </span>
                   <span>Data</span>
                   </a>
-            </div>
-
+                </span>
+            <span class="link-block">
+              <a href="#leaderboard"
+                 class="external-link button is-normal is-rounded is-dark">
+                <span class="icon">
+                    <p style="font-size:18px">🏆</p>
+                </span>
+                <span>Leaderboard</span>
+                </a>
+            </span>
           </div>
         </div>
       </div>
@@ -175,280 +181,529 @@
   </div>
 </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
-    <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
-  </div>
-</section>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
 <section class="section">
+  <div class="container is-fluid no-padding">
+      <img src="/static/images/interaction_teasoe.pdf" 
+           alt="A descriptive caption for the teaser image"
+           style="width: 100%; height: auto;">
+  </div>
+</section>
+
+<section class="section pt-0">
   <div class="container is-max-desktop">
     <!-- Abstract. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
+        <h2 class="title is-3">Introduction</h2>
         <div class="content has-text-justified">
           <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
+            In different multimodal scenarios, it needs to integrate and utilize information across modalities in a specific way based on the demands of the task. Different integration ways between modalities are referred to as “multimodal interaction”. How well a model handles various multimodal interactions largely characterizes its multimodal ability. 
           </p>
           <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
+            In this paper, we introduce <b>MIBench</b>, a comprehensive benchmark designed to evaluate the multimodal interaction capabilities of Large Multimodal Models (LMMs), which formulates each instance as a ($con_v$, $con_t$, $task$) triplet with <b>con</b>texts from <b>v</b>ision and <b>t</b>ext, necessitating that LMMs employ correct forms of multimodal interaction to effectively complete the task.
+            MIBench assesses models from three key perspectives: the ability to source information from vision-centric or text-centric cues, and the ability to generate new information from their joint synergy. 
+            Each interaction capability is evaluated hierarchically across three cognitive levels: Recognition, Understanding, and Reasoning. The benchmark comprises over 10,000 vision-text context pairs spanning 32 distinct tasks.
           </p>
           <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
+            Evaluation of state-of-the-art LMMs show that: (1) LMMs' ability on multimodal interaction <strong>remains constrained</strong>, <strong>despite the scaling of model parameters and training data</strong>; (2) they are <strong>easily distracted by textual modalities</strong> when processing vision information; (3) they mostly <strong>possess a basic capacity for multimodal synergy</strong>; and (4) <strong>natively trained multimodal models</strong> show noticeable <strong>deficits in fundamental interaction ability</strong>. 
+            We expect that these observations can serve as a reference for developing LMMs with more enhanced multimodal ability in the future.
           </p>
         </div>
       </div>
     </div>
     <!--/ Abstract. -->
 
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
     <!--/ Paper video. -->
   </div>
 </section>
 
+<section class="section pt-0">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered" id="leaderboard">Leaderboard</h2>
+    
+    <div class="content is-size-6">
+      <p class="has-text-centered">
+        Performance of state-of-the-art LMMs on <b>MIBench</b> and <b>MIBench-mini</b>. <br>
+        <span class="legend-box closed-legend"></span> Closed-source Models &nbsp;&nbsp;
+        <span class="legend-box open-legend"></span> Open-Source Models
+      </p>
+    </div>
+
+    <!-- 表格容器 -->
+    <div class="table-container custom-table-wrapper">
+      <table class="table is-fullwidth is-hoverable custom-leaderboard">
+        <thead>
+          <!-- 一级表头 -->
+          <tr class="header-primary">
+            <th class="model-col" rowspan="2"><strong>Model</strong></th>
+            <!-- 给大标题也加上一点对应的色调或保持中性 -->
+            <th colspan="4" class="dataset-group-1">MIBench (Full)</th>
+            <th colspan="4" class="dataset-group-2">MIBench-mini</th>
+          </tr>
+          <!-- 二级表头：彩色背景 -->
+          <tr class="header-secondary">
+            <!-- MIBench Full Columns -->
+            <th class="th-vision"><strong>Vision</strong></th>
+            <th class="th-text">Text</th>
+            <th class="th-synergy">Synergy</th>
+            <th>Overall</th>
+            <!-- MIBench Mini Columns -->
+            <th class="th-vision"><strong></strong>Vision</strong></th>
+            <th class="th-text">Text</th>
+            <th class="th-synergy">Synergy</th>
+            <th>Overall</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <!-- Rank 1: Gemini-3-pro (Closed) -->
+          <tr class="row-closed">
+            <td>Gemini-3-pro-preview</td>
+            <td>-</td><td>-</td><td>-</td><td>-</td>
+            <td><b>71.70</b></td><td><b>87.20</b></td><td><b>81.00</b></td><td><b>79.97</b></td>
+          </tr>
+          
+          <!-- Rank 2: Gemini-2.5-pro (Closed) -->
+          <tr class="row-closed">
+            <td>Gemini-2.5-pro</td>
+            <td>-</td><td>-</td><td>-</td><td>-</td>
+            <td>69.40</td><td>84.40</td><td>76.00</td><td>76.60</td>
+          </tr>
+
+          <!-- Rank 3: o3 (Closed) -->
+          <tr class="row-closed">
+            <td>o3</td>
+            <td>-</td><td>-</td><td>-</td><td>-</td>
+            <td>63.60</td><td>85.00</td><td>72.00</td><td>73.53</td>
+          </tr>
+
+          <!-- Rank 4: GPT-5.1 (Closed) -->
+          <tr class="row-closed">
+            <td>GPT-5.1</td>
+            <td>-</td><td>-</td><td>-</td><td>-</td>
+            <td>64.40</td><td>82.80</td><td>71.00</td><td>72.73</td>
+          </tr>
+
+          <!-- Rank 5: GPT-5.2 (Closed) -->
+          <tr class="row-closed">
+            <td>GPT-5.2</td>
+            <td>-</td><td>-</td><td>-</td><td>-</td>
+            <td>64.00</td><td>80.00</td><td>70.00</td><td>71.60</td>
+          </tr>
+
+          <!-- Rank 6: Claude-4.5 (Closed) -->
+          <tr class="row-closed">
+            <td>Claude-4.5-Sonnet</td>
+            <td>-</td><td>-</td><td>-</td><td>-</td>
+            <td>59.60</td><td>80.80</td><td>72.00</td><td>70.80</td>
+          </tr>
+
+          <!-- Rank 7: Qwen3-VL-235B (Open) -->
+          <tr class="row-open">
+            <td>Qwen3-VL-235B</td>
+            <td><b>68.48</b></td><td>73.17</td><td><b>61.40</b></td><td><b>67.89</b></td>
+            <td>68.00</td><td>72.00</td><td>60.00</td><td>66.67</td>
+          </tr>
+
+          <!-- Rank 8: InternVL3.5-241B (Open) -->
+          <tr class="row-open">
+            <td>InternVL3.5-241B</td>
+            <td>63.42</td><td><b>74.78</b></td><td>58.01</td><td>65.82</td>
+            <td>62.20</td><td>73.20</td><td>61.00</td><td>65.47</td>
+          </tr>
+
+          <!-- Rank 9: Qwen2.5-VL-72B (Open) -->
+          <tr class="row-open">
+            <td>Qwen2.5-VL-72B</td>
+            <td>65.15</td><td>69.48</td><td>56.37</td><td>63.87</td>
+            <td>65.40</td><td>67.20</td><td>59.00</td><td>63.87</td>
+          </tr>
+
+          <!-- Rank 10: GPT-4o (Closed) -->
+          <tr class="row-closed">
+            <td>GPT-4o</td>
+            <td>-</td><td>-</td><td>-</td><td>-</td>
+            <td>57.40</td><td>72.20</td><td>57.00</td><td>62.20</td>
+          </tr>
+
+          <!-- Rank 11: Qwen2.5-VL-32B (Open) -->
+          <tr class="row-open">
+            <td>Qwen2.5-VL-32B</td>
+            <td>63.55</td><td>68.09</td><td>51.33</td><td>61.22</td>
+            <td>62.80</td><td>69.20</td><td>50.00</td><td>60.67</td>
+          </tr>
+
+          <!-- Rank 12: InternVL3.5-8B (Open) -->
+          <tr class="row-open">
+            <td>InternVL3.5-8B</td>
+            <td>57.52</td><td>67.28</td><td>51.03</td><td>58.98</td>
+            <td>57.60</td><td>67.00</td><td>53.00</td><td>59.20</td>
+          </tr>
+
+          <!-- Rank 13: Qwen3-VL-8B (Open) -->
+          <tr class="row-open">
+            <td>Qwen3-VL-8B</td>
+            <td>64.08</td><td>64.61</td><td>53.59</td><td>60.85</td>
+            <td>63.20</td><td>60.40</td><td>52.00</td><td>58.53</td>
+          </tr>
+
+          <!-- Rank 14: LLaVA-OV-1.5-8B (Open) -->
+          <tr class="row-open">
+            <td>LLaVA-OV-1.5-8B</td>
+            <td>59.41</td><td>65.38</td><td>47.64</td><td>57.75</td>
+            <td>58.00</td><td>65.20</td><td>48.00</td><td>57.07</td>
+          </tr>
+
+          <!-- Rank 15: InternVL3-8B (Open) -->
+          <tr class="row-open">
+            <td>InternVL3-8B</td>
+            <td>61.93</td><td>65.82</td><td>48.05</td><td>58.82</td>
+            <td>59.20</td><td>65.20</td><td>45.00</td><td>56.47</td>
+          </tr>
+
+          <!-- Rank 16: LLaVA-OV-72B (Open) -->
+          <tr class="row-open">
+            <td>LLaVA-OV-72B</td>
+            <td>54.61</td><td>66.01</td><td>50.10</td><td>57.33</td>
+            <td>54.80</td><td>68.40</td><td>45.00</td><td>56.07</td>
+          </tr>
+
+          <!-- Rank 17: InternVL2.5-8B (Open) -->
+          <tr class="row-open">
+            <td>InternVL2.5-8B</td>
+            <td>59.61</td><td>65.03</td><td>47.43</td><td>57.62</td>
+            <td>58.80</td><td>63.20</td><td>45.00</td><td>55.67</td>
+          </tr>
+
+          <!-- Rank 18: Qwen2-VL-7B (Open) -->
+          <tr class="row-open">
+            <td>Qwen2-VL-7B</td>
+            <td>60.29</td><td>62.76</td><td>44.66</td><td>56.09</td>
+            <td>59.40</td><td>63.80</td><td>43.00</td><td>55.40</td>
+          </tr>
+
+          <!-- Rank 19: Qwen2.5-VL-7B (Open) -->
+          <tr class="row-open">
+            <td>Qwen2.5-VL-7B</td>
+            <td>59.61</td><td>58.88</td><td>44.97</td><td>54.56</td>
+            <td>55.80</td><td>59.20</td><td>49.00</td><td>54.67</td>
+          </tr>
+
+          <!-- Rank 20: Deepseek-VL2-27B (Open) -->
+          <tr class="row-open">
+            <td>Deepseek-VL2-27B</td>
+            <td>61.32</td><td>60.49</td><td>40.76</td><td>54.30</td>
+            <td>58.40</td><td>61.20</td><td>39.00</td><td>52.87</td>
+          </tr>
+
+          <!-- Rank 21: InternVL2-8B (Open) -->
+          <tr class="row-open">
+            <td>InternVL2-8B</td>
+            <td>53.29</td><td>62.53</td><td>45.79</td><td>54.23</td>
+            <td>49.60</td><td>59.00</td><td>45.00</td><td>51.20</td>
+          </tr>
+
+          <!-- Rank 22: LLaVA-OV-7B (Open) -->
+          <tr class="row-open">
+            <td>LLaVA-OV-7B</td>
+            <td>55.50</td><td>55.54</td><td>42.81</td><td>51.37</td><td>53.00</td><td>57.20</td><td>43.00</td><td>51.07</td>
+          </tr>
+
+          <!-- Rank 23: Qwen2.5-VL-3B (Open) -->
+          <tr class="row-open">
+            <td>Qwen2.5-VL-3B</td>
+            <td>54.67</td><td>56.01</td><td>37.78</td><td>49.65</td><td>53.60</td><td>53.00</td><td>41.00</td><td>49.20</td></tr>
+
+          <!-- Rank 24: Deepseek-VL-7B (Open) -->
+          <tr class="row-open">
+            <td>Deepseek-VL-7B</td>
+            <td>54.16</td><td>56.60</td><td>35.22</td><td>48.86</td><td>50.60</td><td>57.80</td><td>37.00</td><td>48.47</td></tr>
+
+          <!-- Rank 25: LLaVA-1.5-7B (Open) -->
+          <tr class="row-open">
+            <td>LLaVA-1.5-7B</td>
+            <td>48.73</td><td>44.67</td><td>35.93</td><td>43.06</td><td>44.60</td><td>47.20</td><td>32.00</td><td>41.27</td></tr>
+
+          <!-- Rank 26: LLaVA-1.6-7B (Open) -->
+          <tr class="row-open">
+            <td>LLaVA-1.6-7B</td>
+            <td>47.00</td><td>46.72</td><td>33.16</td><td>42.37</td><td>43.60</td><td>43.00</td><td>35.00</td><td>40.53</td></tr>
+
+          <!-- Rank 27: Emu3-8B (Open) -->
+          <tr class="row-open">
+            <td>Emu3-8B</td>
+            <td>40.35</td><td>47.46</td><td>30.49</td><td>39.74</td><td>45.40</td><td>43.60</td><td>25.00</td><td>38.00</td></tr>
+
+           <!-- Rank 28: Chameleon-30B (Open) (Ranked same as Emu3 roughly, adjusted based on Mini Overall) -->
+          <tr class="row-open">
+            <td>Chameleon-30B</td>
+            <td>33.71</td><td>44.26</td><td>34.80</td><td>37.94</td><td>30.00</td><td>39.00</td><td>45.00</td><td>38.00</td></tr>
+
+          <!-- Rank 29: Chameleon-7B (Open) -->
+          <tr class="row-open">
+            <td>Chameleon-7B</td>
+            <td>29.12</td><td>39.58</td><td>37.06</td><td>35.55</td><td>24.80</td><td>43.00</td><td>34.00</td><td>33.93</td></tr>
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+    <!-- <h1 class="title is-1 mathvista"><img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>MathVista Dataset</h1> -->
+  <h1 class="title is-1 mathvista">
+    <span class="mathvista" style="vertical-align: middle">Overview of MIBench</span>
+  </h1>
+  </div>
+</section>
 
 <section class="section">
+  <div class="container is-fluid no-padding" style="display: flex; justify-content: center; align-items: center;">
+      <img src="static/images/framework_new——1.pdf" 
+           alt="A descriptive caption for the teaser image"
+           style="width: 1200px; height: auto; display: block; margin: 0 auto;">
+  </div>
+</section>
+
+<section class="section pt-0">
   <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3"></h2>
 
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
+        <div class="content has-text-justified">
           <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
+            MIBench introduces a comprehensive evaluation framework designed to deeply assess the multimodal interaction capabilities of LMMs.
+            It evaluates LMMs on three interaction patterns: <b>Vision-centric</b>, <b>Text-centric</b>, and <b>Synergy</b>, which require models to source information from visual cues, textual cues, or a combination of both modalities, respectively. 
+            These patterns are evaluated across three progressive cognitive levels: <b>Recognition</b>, <b>Understanding</b>, and <b>Reasoning</b>. 
+          </p>  
+          <p>
+            Within this framework, each evaluation instance is formulated as a <b>($\textbf{con}_\textbf{v}$, $\textbf{con}_\textbf{t}$, $\textbf{task}$)</b> triplet.  For vision- and text-centric tasks, they can be resolved by leveraging cues from the centric modality. We introduce various contexts from another modality to evaluate the model's ability to selectively utilize cues from the target modality, which range from helpful contexts (e.g., correct guidance, concept visualization) to misleading guidance and unrelated contents. 
+            For the synergy part, the model is presented with one coupled visual-textual pair with complementary cues, necessitating effective cross-modal collaboration. 
           </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
-            </video>
-          </div>
-
+          <p>
+            To meet these requirements, we first identify suitable tasks based on the proposed taxonomy, and subsequently collect, re-annotate, or synthesize test samples following the carefully designed annotation pipeline.
+            Ultimately, this structured approach culminates in a large-scale benchmark comprising <b>32 distinct tasks</b> and <b>2,980 base samples</b>, which are expanded into <b>10,030 context pairs</b> through diverse contextual variations, enabling a fine-grained analysis of model interaction capabilities.
+          </p>
         </div>
       </div>
     </div>
-    <!--/ Matting. -->
 
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
-
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
-          </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
+    
+    <section class="section pt-0">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered"></h2>
+    
+        <!-- 外层包裹一个 div 来限制总宽度 -->
+        <div class="carousel-custom-wrapper">
+          
+          <div id="results-carousel" class="carousel results-carousel">
+            
+            <!-- 第一张图 -->
+            <div class="item">
+              <!-- 注意 class="item-image" -->
+              <img src="static/images/test_副本3.pdf" alt="Description 1" class="item-image">
+              <h2 class="subtitle has-text-centered">Sample format of Vision-centric tasks and test case.</h2>
             </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
+            <div class="item">
+              <!-- 注意 class="item-image" -->
+              <img src="static/images/test_副本2.pdf" alt="Description 1" class="item-image">
+              <h2 class="subtitle has-text-centered">Sample format of Text-centric tasks and test case.</h2>
+            </div>
+            <div class="item">
+              <!-- 注意 class="item-image" -->
+              <img src="static/images/test_副本.pdf" alt="Description 1" class="item-image">
+              <h2 class="subtitle has-text-centered">Sample format of Synergy tasks and test case.</h2>
+            </div>
+            <div class="item">
+              <!-- 注意 class="item-image" -->
+              <img src="static/images/pipline_new.pdf" alt="Description 1" class="item-image">
+              <h2 class="subtitle has-text-centered">Overview of the sample annotation pipeline.</h2>
+            </div>
+    
+            <!-- 第三张图 -->
+            <div class="item">
+              <img src="static/images/statics.pdf" alt="Description 3" class="item-image">
+              <h2 class="subtitle has-text-centered">more statistics of MIBench and proportion of sources for collected images.</h2>
+            </div>
+    
           </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
-        </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
-      </div>
-    </div>
-    <!--/ Animation. -->
-
-
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
+          
         </div>
       </div>
-    </div>
-    <!--/ Concurrent Work. -->
+
+
 
   </div>
 </section>
+
+<section class="hero is-light is-small">
+  <div class="hero-body has-text-centered">
+    <!-- <h1 class="title is-1 mathvista"><img src="static/images/mathvista.png" style="width:1.0em;vertical-align: middle" alt="Logo"/>MathVista Dataset</h1> -->
+  <h1 class="title is-1 mathvista">
+    <span class="mathvista" style="vertical-align: middle">Experiments</span>
+  </h1>
+  </div>
+</section>
+
+<section class="section pt-0">
+  <div class="container is-max-desktop">
+    <h2 class="title is-3 has-text-centered"></h2>
+
+    <!-- 外层包裹一个 div 来限制总宽度 -->
+    <div class="carousel-custom-wrapper">
+      
+      <div id="results-carousel" class="carousel results-carousel">
+        
+        <!-- 第一张图 -->
+        <div class="item">
+          <!-- 注意 class="item-image" -->
+          <img src="static/images/for_compare.pdf" alt="Description 1" class="item-image">
+          <h2 class="subtitle has-text-centered">Impact of version iteration (Left) and parameter scaling (Right) on multimodal interaction capabilities.</h2>
+        </div>
+        <div class="item">
+          <!-- 注意 class="item-image" -->
+          <img src="static/images/all_models_by_level_boxplots_square_icml（2）.pdf" alt="Description 1" class="item-image">
+          <h2 class="subtitle has-text-centered">Performance of open-source LMMs across three progressively cognitive levels: Recognition (Level 1), Understanding (Level 2), and Reasoning (Level 3).</h2>
+        </div>
+        <div class="item">
+          <!-- 注意 class="item-image" -->
+          <img src="static/images/consistency.pdf" alt="Description 1" class="item-image">
+          <h2 class="subtitle has-text-centered">A comparison of all LMMs' modality source selection consistency evaluated on MIBench-mini, with dot sizes scaled according to model parameter counts.</h2>
+        </div>
+        <div class="item">
+          <!-- 注意 class="item-image" -->
+          <img src="static/images/qwen2.5_accuracy_curve_2.pdf" alt="Description 1" class="item-image">
+          <h2 class="subtitle has-text-centered">Impact of parameter scaling on synergy capabilities (on Qwen2.5-VL).</h2>
+        </div>
+        <div class="item">
+          <!-- 注意 class="item-image" -->
+          <img src="static/images/rada_1_new.pdf" alt="Description 1" class="item-image">
+          <h2 class="subtitle has-text-centered">Comparison of LMMs' performance within different series ({Left: LLaVA; Right: Qwen-VL) </h2>
+        </div>
+        <div class="item">
+          <!-- 注意 class="item-image" -->
+          <img src="static/images/radar_2_new.pdf" alt="Description 1" class="item-image">
+          <h2 class="subtitle has-text-centered">Left: non-native vs. native LMMs. Right: Performance of SOTA open-source and closed-source LMMs.  </h2>
+        </div>
+        <div class="item">
+          <!-- 注意 class="item-image" -->
+          <img src="static/images/by_task_accuracy_boxplot.pdf" alt="Description 1" class="item-image">
+          <h2 class="subtitle has-text-centered">LMM's performance on different task types.</h2>
+        </div>
+
+
+      </div>
+      
+    </div>
+  </div>
+
+
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Results Analysis. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Results Analysis</h2>
+  
+          <div class="content has-text-justified">
+            <p>
+              Building on MIBench, we evaluate the interaction capabilities of current open-source and closed-source models. This analysis yields several key findings:
+            </p>
+            <ul>
+              <li>
+                <strong>Current LMMs remain constrained</strong> in their ability to perform effective <strong>multimodal interaction</strong>, <strong>despite increases in model scale and data sources</strong>.
+              </li>
+              <li>
+                <strong>LMMs demonstrate limited proficiency in selectively extracting cues from the target modality.</strong> This issue is particularly severe in vision-centric tasks, as the models often fail to prioritize visual evidence over the textual context.
+              </li>
+              <li>
+                While LMMs show acceptable performance in basic cross-modal alignment, their effectiveness <strong>drops in tasks requiring deep interactive understanding and reasoning</strong>, for which parameter scaling is insufficient to address.
+              </li>
+              <li>
+                <strong>Native LMMs struggle with fundamental perception</strong>, creating a bottleneck for complex interactions. <strong>Non-native LMMs</strong> appear to lean on powerful LLM foundations for better synergy but are <strong>hindered by a strong text bias that prevents deeper cross-modal collaboration</strong>.
+              </li>
+            </ul>
+            <p>By focusing on multimodal interaction, MIBench offers fresh insights into whether current LMMs are truly achieving multimodal intelligence. It also provides clear direction and inspiration for the next steps in developing more advanced, genuine synergistic capabilities.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+        
+    <section class="section pt-0">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Case Study</h2>
+    
+        <!-- 外层包裹一个 div 来限制总宽度 -->
+        <div class="carousel-custom-wrapper">
+          
+          <div id="results-carousel" class="carousel results-carousel">
+            
+            <!-- 第一张图 -->
+            <div class="item">
+              <!-- 注意 class="item-image" -->
+              <img src="static/images/v1.pdf" alt="Description 1" class="item-image">
+              <h2 class="subtitle has-text-centered">A case where o3 fails in counting when faced with a misleading description of the visual context.</h2>
+            </div>
+            <div class="item">
+              <!-- 注意 class="item-image" -->
+              <img src="static/images/v2_new.pdf" alt="Description 1" class="item-image">
+              <h2 class="subtitle has-text-centered">A case where Gemini 2.5 Pro fails in attribute comparison when faced witha misleading description of the visual context.</h2>
+            </div>
+            <div class="item">
+              <!-- 注意 class="item-image" -->
+              <img src="static/images/v3_new.pdf" alt="Description 1" class="item-image">
+              <h2 class="subtitle has-text-centered">A case that GPT 5.1 fails in spatial reasoning when faced with a totally irrelevant textual context, indicating its shortcomings in deep visual reasoning. </h2>
+            </div>
+            <div class="item">
+              <!-- 注意 class="item-image" -->
+              <img src="static/images/t1_new.pdf" alt="Description 1" class="item-image">
+              <h2 class="subtitle has-text-centered"> A case that GPT-4o fails in checking for grammatical errors when facing a visual context with related concepts, indicating that visual context affects the model's understanding of the textual context.</h2>
+            </div>
+    
+            <div class="item">
+              <!-- 注意 class="item-image" -->
+              <img src="static/images/t2_new.pdf" alt="Description 1" class="item-image">
+              <h2 class="subtitle has-text-centered"> A case that Claude Sonnet 4.5 fails in determining the similarity relation between sentences when facing a visual context with misleading visual guidance.</h2>
+            </div>
+
+
+          <div class="item">
+            <!-- 注意 class="item-image" -->
+            <img src="static/images/t3_new.pdf" alt="Description 1" class="item-image">
+            <h2 class="subtitle has-text-centered">A case that GPT 5.1 fails in solving a textual chemistry problem when faced with an unrelated image.</h2>
+          </div>
+          
+          <div class="item">
+            <!-- 注意 class="item-image" -->
+            <img src="static/images/s1_new.pdf" alt="Description 1" class="item-image">
+            <h2 class="subtitle has-text-centered">A case that Gemini 3 Pro Preview fails in basic position alignment, indicating a strong textual bias and limited attention to visual content.</h2>
+          </div>
+
+          <div class="item">
+            <!-- 注意 class="item-image" -->
+            <img src="static/images/s2_new.pdf" alt="Description 1" class="item-image">
+            <h2 class="subtitle has-text-centered">A case that o3 fails in rule execution tasks, indicating its deficiencies in handling frequent complex cross-modal interactions in natural scenes.</h2>
+          </div>
+
+          <div class="item">
+            <!-- 注意 class="item-image" -->
+            <img src="static/images/s3.pdf" alt="Description 1" class="item-image">
+            <h2 class="subtitle has-text-centered">A case that o3 fails in solving business problem.</h2>
+          </div>
+
+        </div>
+      </div>
 
 
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+    <pre><code>@article{
 }</code></pre>
   </div>
 </section>
@@ -458,10 +713,10 @@
   <div class="container">
     <div class="content has-text-centered">
       <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
+         href="">
         <i class="fas fa-file-pdf"></i>
       </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+      <a class="icon-link" href="" class="external-link" disabled>
         <i class="fab fa-github"></i>
       </a>
     </div>
@@ -469,22 +724,46 @@
       <div class="column is-8">
         <div class="content">
           <p>
+            Thanks to <a href="https://nerfies.github.io/">Nerfies</a> for providing this website template.
+        </p>
+          <p>
             This website is licensed under a <a rel="license"
                                                 href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
             Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
           </p>
         </div>
       </div>
     </div>
   </div>
 </footer>
+
+<!-- 必须引入 JQuery (模板通常已有，确保这行在上面) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<!-- 必须引入 Bulma Carousel JS (确保路径正确) -->
+<script src="./static/js/bulma-carousel.min.js"></script>
+
+<!-- 核心初始化代码 -->
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  // 找到所有带有 .results-carousel 类的元素并初始化
+  var carousels = bulmaCarousel.attach('.results-carousel', {
+    slidesToScroll: 1,
+    slidesToShow: 1,
+    pagination: false,
+    loop: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  });
+
+  // 这里的代码用于修正某些情况下轮播图尺寸计算错误的问题
+  carousels.forEach(function(carousel) {
+      carousel.on('before:show', function(state) {
+          // 强制刷新
+      });
+  });
+});
+</script>
 
 </body>
 </html>

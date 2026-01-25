@@ -155,3 +155,143 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+
+  /* 1. 控制轮播框整体大小和位置 */
+  .carousel-custom-wrapper {
+    max-width: 800px; /* 这里调整框的宽度，例如 600px, 80% 等 */
+    margin: 0 auto;   /* 这行代码让整个框在页面中间 */
+  }
+
+  /* 2. 控制图片的大小和居中 */
+  .item-image {
+    height: 400px;       /* 这里调整图片显示的高度 */
+    width: auto;         /* 宽度自动，保持比例 */
+    object-fit: contain; /* 保证图片显示全貌，不被拉伸裁剪 */
+    
+    display: block;      /* 块级显示 */
+    margin-left: auto;   /* 左边自动边距 */
+    margin-right: auto;  /* 右边自动边距 -> 实现水平居中 */
+  }
+  
+  /* 修正 Bulma Carousel 内部可能导致的对齐问题 */
+  .carousel .item {
+    text-align: center; /* 确保文字和内联元素居中 */
+  }
+
+
+/* --- 基础表格容器 --- */
+.custom-table-wrapper {
+  border: 1px solid #dbdbdb;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  overflow: hidden; 
+  margin-bottom: 2rem;
+}
+
+.custom-leaderboard {
+  margin-bottom: 0 !important;
+  font-size: 0.9em; 
+  border-collapse: collapse;
+}
+
+.custom-leaderboard td, 
+.custom-leaderboard th {
+  border-width: 0 0 1px;
+  vertical-align: middle;
+  text-align: center;
+  padding: 0.6em 0.5em; /* 调整间距 */
+}
+
+.custom-leaderboard td:first-child, 
+.custom-leaderboard th:first-child {
+  text-align: left;
+  border-right: 1px solid #e0e0e0;
+  font-weight: 500;
+  white-space: nowrap; 
+  padding-left: 1rem;
+}
+
+/* --- 表头样式 (Super Header) --- */
+.custom-leaderboard thead th {
+  color: #fff;
+  background-color: #363636;
+  border-color: #4a4a4a;
+  font-weight: 600;
+}
+
+.custom-leaderboard thead .dataset-group-2 {
+  background-color: #485fc7; /* Link Blue - Mini */
+}
+.custom-leaderboard thead .dataset-group-1 {
+  background-color: #3e8ed0; /* Info Blue - Full */
+}
+
+/* --- 彩色表头 (二级) --- */
+/* Vision - 浅橙色 */
+.custom-leaderboard .header-secondary .th-vision {
+  background-color: #fff3cd !important;
+  color: #856404 !important;
+  border-bottom: 2px solid #ffeeba;
+}
+/* Text - 浅绿色 */
+.custom-leaderboard .header-secondary .th-text {
+  background-color: #d1e7dd !important;
+  color: #0f5132 !important;
+  border-bottom: 2px solid #badbcc;
+}
+/* Synergy - 浅蓝色 */
+.custom-leaderboard .header-secondary .th-synergy {
+  background-color: #cff4fc !important;
+  color: #055160 !important;
+  border-bottom: 2px solid #b6effb;
+}
+/* Overall - 灰色/默认 */
+.custom-leaderboard .header-secondary th:last-child,
+.custom-leaderboard .header-secondary th:nth-child(4) {
+  background-color: #f8f9fa !important;
+  color: #363636 !important;
+  border-bottom: 2px solid #dbdbdb;
+}
+
+/* --- 行背景区分 (Open vs Closed) --- */
+
+/* 闭源模型：极淡的红色/粉色背景，暗示 proprietary */
+.row-closed {
+  background-color: #fff5f5; 
+}
+.row-closed:hover {
+  background-color: #ffe0e0 !important;
+}
+
+/* 开源模型：白色背景 */
+.row-open {
+  background-color: #ffffff;
+}
+.row-open:hover {
+  background-color: #f0f0f0 !important;
+}
+
+/* --- 图例样式 --- */
+.legend-box {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  border: 1px solid #ccc;
+  margin-right: 4px;
+  position: relative;
+  top: 1px;
+}
+.closed-legend { background-color: #fff5f5; }
+.open-legend { background-color: #ffffff; }
+
+/* 最高分高亮颜色 */
+.custom-leaderboard b {
+  color: #d32f2f;
+}
+
+.custom-leaderboard .model-col {
+  background-color: #E8A7A7 !important; 
+  color: #ffffff;
+}
